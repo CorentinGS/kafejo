@@ -2,6 +2,7 @@ package controllers
 
 import (
 	"github.com/corentings/kafejo/internal/barista"
+	"github.com/gofiber/fiber/v2"
 )
 
 type BaristaController struct {
@@ -9,5 +10,5 @@ type BaristaController struct {
 }
 
 func (b *BaristaController) GetName(c *fiber.Ctx) error {
-
+	return c.SendString(b.UseCase.GetName())
 }

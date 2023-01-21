@@ -1,18 +1,22 @@
 package main
 
 import (
-	"github.com/memnix/memnix-rest/data/infrastructures"
+	"github.com/corentings/kafejo/infrastructures"
 	"log"
 )
 
 func main() {
 	log.Printf("Hello, world.")
 
-	err := infrastructures.Connect()
+	err := infrastructures.ConnectDB()
 	if err != nil {
-		return
+		log.Fatal(err)
 	}
-
-	defer infrastructures.Disconnect()
+	defer func() {
+		err := infrastructures.CloseDB()
+		if err != nil {
+			log.Fatal(err)
+		}
+	}()
 
 }
