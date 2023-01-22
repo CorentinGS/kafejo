@@ -1,7 +1,7 @@
 package http
 
 import (
-	config "github.com/corentings/kafejo/pkg"
+	"github.com/corentings/kafejo/config"
 	"time"
 
 	_ "github.com/corentings/kafejo/docs" // Side effect import

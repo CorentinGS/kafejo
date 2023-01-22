@@ -7,12 +7,17 @@ import (
 
 type ServiceContainer interface {
 	GetBarista() controllers.BaristaController
+	GetKliento() controllers.KlientoController
 }
 
 type kernel struct{}
 
 func (k kernel) GetBarista() controllers.BaristaController {
 	return InitializeBarista()
+}
+
+func (k kernel) GetKliento() controllers.KlientoController {
+	return InitializeKliento()
 }
 
 var (

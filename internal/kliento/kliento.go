@@ -1,21 +1,15 @@
 package kliento
 
-type Handlers interface {
+type IUseCase interface {
 	// GetName returns the name of the kliento.
 	GetName() string
+	// SetName sets the name of the kliento.
+	SetName(name string) error
 }
 
-type UseCase interface {
+type IRedisRepository interface {
 	// GetName returns the name of the kliento.
 	GetName() string
-}
-
-type PgRepository interface {
-	// GetName returns the name of the kliento.
-	GetName() string
-}
-
-type RedisRepository interface {
-	// GetName returns the name of the kliento.
-	GetName() string
+	// SetName sets the name of the kliento.
+	SetName(name string) error
 }

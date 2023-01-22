@@ -5,14 +5,18 @@ go 1.19
 require (
 	github.com/bytedance/sonic v1.7.0
 	github.com/go-playground/validator/v10 v10.11.1
+	github.com/go-redis/redis/v8 v8.11.5
 	github.com/goccy/go-json v0.10.0
 	github.com/gofiber/fiber/v2 v2.41.0
 	github.com/gofiber/swagger v0.1.8
 	github.com/google/wire v0.5.0
 	github.com/joho/godotenv v1.4.0
+	github.com/rs/zerolog v1.28.0
 	github.com/swaggo/swag v1.8.9
+	gopkg.in/natefinch/lumberjack.v2 v2.0.0
 	gorm.io/driver/postgres v1.4.6
 	gorm.io/gorm v1.24.3
+
 )
 
 require (
@@ -20,7 +24,9 @@ require (
 	github.com/PuerkitoBio/purell v1.1.1 // indirect
 	github.com/PuerkitoBio/urlesc v0.0.0-20170810143723-de5bf2ad4578 // indirect
 	github.com/andybalholm/brotli v1.0.4 // indirect
+	github.com/cespare/xxhash/v2 v2.1.2 // indirect
 	github.com/chenzhuoyu/base64x v0.0.0-20221115062448-fe3a3abad311 // indirect
+	github.com/dgryski/go-rendezvous v0.0.0-20200823014737-9f7001d12a5f // indirect
 	github.com/go-openapi/jsonpointer v0.19.5 // indirect
 	github.com/go-openapi/jsonreference v0.19.6 // indirect
 	github.com/go-openapi/spec v0.20.4 // indirect
