@@ -1,6 +1,7 @@
 package http
 
 import (
+	config "github.com/corentings/kafejo/pkg"
 	"time"
 
 	_ "github.com/corentings/kafejo/docs" // Side effect import
@@ -16,7 +17,11 @@ import (
 func New() *fiber.App {
 	// Create new app
 	app := fiber.New(
-		fiber.Config{})
+		fiber.Config{
+			Prefork:     false,
+			JSONDecoder: config.JSONHelper.Unmarshal,
+			JSONEncoder: config.JSONHelper.Marshal,
+		})
 
 	// Register middlewares
 	registerMiddlewares(app)
