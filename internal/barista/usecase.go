@@ -1,7 +1,7 @@
-package usecase
+package barista
 
 type BaristaUsecase struct {
-	barista.PgRepository
+	PgRepository
 }
 
 // GetName returns the name of the barista.

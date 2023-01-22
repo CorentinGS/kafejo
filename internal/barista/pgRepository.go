@@ -1,12 +1,12 @@
-package repository
+package barista
 
 import "gorm.io/gorm"
 
-type PgRepository struct {
+type BaristaPgRepository struct {
 	DBConn *gorm.DB
 }
 
 // GetName returns the name of the repository.
-func (r *PgRepository) GetName() string {
+func (r *BaristaPgRepository) GetName() string {
 	return "PgRepository"
 }

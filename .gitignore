@@ -17,3 +17,5 @@
 # Directory for idea
 .idea
 
+.env
+docker-compose.yml
