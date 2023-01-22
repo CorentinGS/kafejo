@@ -1,10 +1,14 @@
 package barista
 
-type BaristaUsecase struct {
-	PgRepository
+type UseCase struct {
+	IPgRepository
+}
+
+func NewUseCase(pgRepository IPgRepository) IUseCase {
+	return &UseCase{IPgRepository: pgRepository}
 }
 
 // GetName returns the name of the barista.
-func (u *BaristaUsecase) GetName() string {
-	return u.PgRepository.GetName()
+func (u *UseCase) GetName() string {
+	return u.IPgRepository.GetName()
 }

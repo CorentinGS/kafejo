@@ -6,6 +6,7 @@ require (
 	github.com/go-playground/validator/v10 v10.11.1
 	github.com/gofiber/fiber/v2 v2.41.0
 	github.com/gofiber/swagger v0.1.8
+	github.com/google/wire v0.5.0
 	github.com/joho/godotenv v1.4.0
 	github.com/swaggo/swag v1.8.9
 	gorm.io/driver/postgres v1.4.6

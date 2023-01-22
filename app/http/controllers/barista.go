@@ -6,9 +6,13 @@ import (
 )
 
 type BaristaController struct {
-	barista.UseCase
+	barista.IUseCase
+}
+
+func NewBaristaController(useCase barista.IUseCase) BaristaController {
+	return BaristaController{IUseCase: useCase}
 }
 
 func (b *BaristaController) GetName(c *fiber.Ctx) error {
-	return c.SendString(b.UseCase.GetName())
+	return c.SendString(b.IUseCase.GetName())
 }

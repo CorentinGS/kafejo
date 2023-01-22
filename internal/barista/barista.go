@@ -5,12 +5,12 @@ type Handlers interface {
 	GetName() string
 }
 
-type UseCase interface {
+type IUseCase interface {
 	// GetName returns the name of the barista.
 	GetName() string
 }
 
-type PgRepository interface {
+type IPgRepository interface {
 	// GetName returns the name of the barista.
 	GetName() string
 }
